@@ -1,0 +1,28 @@
+### prueba
+get http://localhost:8000/usuarios/
+### agregar post
+
+POST http://localhost:8000/usuarios
+Content-Type: application/json
+
+{
+        "nombre":"Hefzi ",
+        "email":"ji@gmail.com",
+        "celular":"12345678",
+        "pais":"México",
+        "ciudad":"Nuevo Casas Grandes",
+        "password":"123"
+            
+
+        
+}
+
+
+### eliminar
+DELETE http://localhost:8000/usuarios/1
+
+###actualizar
+PUT http://localhost:8000/usuarios/1
+
+## Enviar mail
+POST http://localhost:8000/usuarios
