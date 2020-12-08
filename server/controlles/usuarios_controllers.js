@@ -58,15 +58,15 @@ module.exports.enviarmail=async (req,res) =>{
     port: 587,
     secure: false, 
     auth: {
-      user: "bamurillo15@gmail.com", // generated ethereal user
-      pass: "HBAmm1999", // generated ethereal password
+      user: "xxxxxxxx@gmail.com", // generated ethereal user
+      pass: "xxxx", // generated ethereal password
     },
   });
 
   // send mail with defined transport object
   let info= await transporter.sendMail({
     from: '"Hefzi👻" <bamurillo15@gmail.com>', // sender address
-    to: "hefzimurillo15@gmail.com", // list of receivers
+    to: "xxxxxxx@gmail.com", // list of receivers
     subject: "Hello ✔ desde nodemailer", // Subject line
     text: "Hello world, preciosa Hefzi", // plain text body
     html: "<b>Hello world?</b>", // html body
