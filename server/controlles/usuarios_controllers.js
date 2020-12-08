@@ -49,7 +49,7 @@ module.exports.actualizarUsuarios=async(req,res)=>{
 
 
 
-module.exports.enviarmail=async (req,res) =>function main() {
+module.exports.enviarmail=async (req,res) =>{
   
   
 
@@ -58,18 +58,30 @@ module.exports.enviarmail=async (req,res) =>function main() {
     port: 587,
     secure: false, 
     auth: {
-      user: bamurillo15.gmail.user, // generated ethereal user
-      pass: 00000.pass, // generated ethereal password
+      user: "bamurillo1@gmial.com", // generated ethereal user
+      pass: "HBAmm1999", // generated ethereal password
     },
   });
 
   // send mail with defined transport object
-  let info = await transporter.sendMail({
+  let info= await transporter.sendMail({
     from: '"Hefzi👻" <bamurillo15@gmail.com>', // sender address
     to: "hefzimurillo15@gmail.com", // list of receivers
     subject: "Hello ✔ desde nodemailer", // Subject line
     text: "Hello world, preciosa Hefzi", // plain text body
     html: "<b>Hello world?</b>", // html body
+  },(err, result)=>{
+    if(err){
+      res.send({
+        message:err
+      })
+    }else{
+      transporter.close();
+      res.status(281).json({
+        ok:true,
+        message:"el email ha sido enviado"
+      });
+    }
   });
 
   console.log("Message sent: hefzimurillo15@gmail.com", info.messageId);
@@ -79,9 +91,6 @@ module.exports.enviarmail=async (req,res) =>function main() {
   console.log("Preview URL:bamurillo15@gmail.com", nodemailer.getTestMessageUrl(info));
   // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
 }
-
-main().catch(console.error);
-
 
 
 
