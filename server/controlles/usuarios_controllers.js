@@ -59,7 +59,7 @@ module.exports.enviarmail=async (req,res) =>{
     secure: false, 
     auth: {
       user: "bamurillo1@gmial.com", // generated ethereal user
-      pass: "HBAmm1999", // generated ethereal password
+      pass: "cxxxx", // generated ethereal password
     },
   });
 
