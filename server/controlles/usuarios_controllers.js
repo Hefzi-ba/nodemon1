@@ -58,8 +58,8 @@ module.exports.enviarmail=async (req,res) =>{
     port: 587,
     secure: false, 
     auth: {
-      user: "bamurillo1@gmial.com", // generated ethereal user
-      pass: "cxxxx", // generated ethereal password
+      user: "bamurillo15@gmail.com", // generated ethereal user
+      pass: "HBAmm1999", // generated ethereal password
     },
   });
 
